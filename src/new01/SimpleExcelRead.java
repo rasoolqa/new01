@@ -12,6 +12,9 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class SimpleExcelRead {
 
 	public static void main(String[] args) {
+		
+		//Give the actual path of the excel sheet.
+		
 		String Excelpath="./Excel/data1.xlsx";
 		try{
 			
@@ -19,6 +22,7 @@ public class SimpleExcelRead {
 		Workbook book=WorkbookFactory.create(fis);
 		Sheet sheet=book.getSheetAt(0);
 		Iterator<Row> iterator=sheet.iterator();
+		
 		while(iterator.hasNext())
 			{
 					Row row=iterator.next();
